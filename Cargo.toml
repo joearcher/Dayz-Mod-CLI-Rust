@@ -1,0 +1,18 @@
+[package]
+name = "dayzmod"
+version = "1.0.0"
+edition = "2021"
+description = "A CLI tool for creating DayZ mod skeletons."
+license = "MIT"
+
+[[bin]]
+name = "dayzmod"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+inquire = "0.7"
+
+[profile.release]
+strip = true
+lto = true

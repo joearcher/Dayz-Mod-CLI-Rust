@@ -1,0 +1,42 @@
+class CfgPatches
+{
+	class { mod_name }
+	{
+		units[]={};
+		weapons[]={};
+		requiredVersion=0.1;
+		requiredAddons[]=
+		{
+			"DZ_Scripts",
+			"DZ_Data",
+		};
+	};
+};
+class CfgMods
+{
+	class { mod_name }
+	{
+		dir="{ mod_name }";
+		picture="";
+		action="";
+		hideName=1;
+		hidePicture=1;
+		name="{ mod_name }";
+		credits="";
+		author="";
+		authorID="0";
+		version=1;
+		extra=0;
+		type="mod";
+		dependencies[]=
+		{
+			{ game dep }{ world dep }{ mission dep }
+		};
+		class defs
+		{
+           	{ gamescript module }
+			{ worldscript module }
+            { missionscript module }
+		};
+	};
+};
